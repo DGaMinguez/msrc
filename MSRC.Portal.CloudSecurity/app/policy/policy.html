@@ -1,0 +1,64 @@
+﻿<div class="BreadCrumb">
+    <div class="BreadCrumbInner EyebrowContainer">
+        <a href="https://technet.microsoft.com/{{activeLocale}}/security/default" class="EyebrowLink" title="{{vm.resources.securityTechCenterBreadCrum}}">
+            {{vm.resources.securityTechCenterBreadCrum}}
+        </a> &gt;
+        <a href="https://technet.microsoft.com/{{activeLocale}}/security/dn440717" class="EyebrowLink" title="{{vm.resources.securityUpdatesBreadCrum}}">
+            {{vm.resources.securityUpdatesBreadCrum}}
+        </a> &gt;
+        <a ui-sref="app.home({locale: activeLocale})" ui-sref-opts="{reload: false}" class="EyebrowLink" title="{{vm.resources.securityUpdatesCloudSecurityBreadCrum}}">
+            {{vm.resources.securityUpdatesCloudSecurityBreadCrum}}
+        </a>
+        &gt; <span class="EyebrowElement" title="{{vm.resources.securityUpdatesEmailHostingBreadCrum}}"> {{vm.resources.securityUpdatesEmailHostingBreadCrum}}</span>
+    </div>
+</div>
+
+<h1>{{vm.resources.contentTitle}}</h1>
+<hr />
+
+<div>
+    {{vm.resources.contentAzureEmailHosting1}}
+    <br />
+    <br />
+    {{vm.resources.contentAzureEmailHosting2}}
+    <br />
+    <br />
+
+    <div class="azureEmailHosting azureEmailHosting1">
+    </div>
+
+    <div class="azureEmailHosting azureEmailHosting2">
+    </div>
+
+    <div class="azureEmailHosting azureEmailHosting3">
+    </div>
+
+    <h3>{{vm.resources.contentHeadingStopSpam}}</h3>
+    <div>{{vm.resources.contentStopSpam}}</div>
+    <ul>
+        <li>{{vm.resources.contentStopSpamLink1}}</li>
+        <li>{{vm.resources.contentStopSpamLink2}}</li>
+    </ul>
+
+    <h3>{{vm.resources.contentHeadingChoosing}}</h3>
+    <div class="azureEmailHostingChoice">{{vm.resources.contentChoosing1}}</div>
+    <div class="azureEmailHostingChoiceLink">
+        <span>{{vm.resources.contentChoosingSee}}&nbsp;</span>
+        <a ui-sref="app.home({locale: activeLocale})" ui-sref-opts="{reload: false}">{{vm.resources.contentChoosingLink1}}</a>
+    </div>
+    <div class="azureEmailHostingChoice">{{vm.resources.contentChoosing2}}</div>
+    <div class="azureEmailHostingChoiceLink">
+        <span>{{vm.resources.contentChoosingSee}}&nbsp;</span>
+        <a ui-sref="app.home({locale: activeLocale})" ui-sref-opts="{reload: false}">{{vm.resources.contentChoosingLink2}}</a>
+    </div>
+    <div class="azureEmailHostingChoice">{{vm.resources.contentChoosing3}}</div>
+    <div class="azureEmailHostingChoiceLink">
+        <span>{{vm.resources.contentChoosingSee}}&nbsp;</span>
+        <a ui-sref="app.home({locale: activeLocale})" ui-sref-opts="{reload: false}">{{vm.resources.contentChoosingLink3}}</a>
+    </div>
+    <div class="azureEmailHostingChoice">{{vm.resources.contentChoosing4}}</div>
+    <div class="azureEmailHostingChoiceLink">
+        <span>{{vm.resources.contentChoosingSee}}&nbsp;</span>
+        <a ui-sref="app.exceptionrequest({locale: activeLocale})" ui-sref-opts="{reload: false}">{{vm.resources.contentChoosingLink4}}</a>
+    </div>
+</div>

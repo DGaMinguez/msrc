@@ -1,0 +1,19 @@
+﻿<div class="controlsInternal" style="overflow: visible" ng-controller="authenticateController as auth">
+
+    <div class="PassportScarab" style="display: inline-block">
+        <span ng-show="auth.isSignedIn">{{commonResources.hiText}}, {{auth.UserName}}!</span>
+        <a id="idPPScarab" ng-click="auth.isSignedIn == false ? auth.login() : auth.logout()">
+            <span style="color: blue">{{auth.SigninText}}</span>
+        </a>
+    </div>
+    <div class="dropdown" style="display: inline-block; " ng-controller="localeController as loc">
+        <a href="#" class="dropdown-toggle LocaleManagementFlyoutStaticLink" data-toggle="dropdown" id="localDropdown">
+            {{loc.selectedLocale.text}}
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="localDropdown">
+            <li ng-repeat="locale in loc.locales">
+                <a ng-click="loc.changeLocale(locale.locale)">{{locale.text}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

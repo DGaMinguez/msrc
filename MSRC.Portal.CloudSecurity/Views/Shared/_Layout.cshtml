@@ -1,0 +1,65 @@
+﻿@using System.Configuration;
+<!DOCTYPE html>
+<html lang="en" ng-app="msrcCloudPortal">
+<head>
+    <base href="/">
+    <meta charset="utf-8" />
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="description" content="Security guidance articles" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" href="https://i1.gallery.technet.s-msft.com/GlobalResources/images/Technet/favicon.ico" type="image/x-icon">
+    <title>{{windowTitle}}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    @Styles.Render("~/content/css")
+    @Styles.Render("~/bundles/less")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/applicationInsights")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body id="MTPS_Body" class="TechNetPageBody">
+    <input type="hidden" id="refreshed" value="no">
+    <script type="text/javascript">
+
+        window.onload = function () {
+            var e = document.getElementById("refreshed");
+            if (e.value == "no") e.value = "yes";
+            else { e.value = "no"; window.location.reload(); }
+        }
+    </script>
+    <div id="BodyBackground">
+        <div id="JelloSizer">
+            <div id="JelloExpander">
+                <div id="JelloWrapper">
+                    <div class="Clear"></div>
+                    <div>
+                        <ng-include ng-if="activeLocale != undefined && commonResources != undefined" src="'../../Content/templates/header.' + activeLocale + '.tpl.html?v=' + staticFileVer"></ng-include>
+                    </div>
+                    <div class="alley">
+                        @RenderBody()
+                    </div>
+                    <div ng-if="activeLocale != undefined && commonResources != undefined" ng-include="'../../Content/templates/footer.' + activeLocale + '.tpl.html?v=' + staticFileVer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <noscript>
+        &lt; img
+        alt="DCSIMG" width="1" height="1"
+        src="http://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No"
+        /&gt;
+    </noscript>
+    <noscript>
+        &lt;a href="http://www.omniture.com" title="Web
+        Analytics"&gt;&lt; img
+        src="http://msstonojstechnet.112.2o7.net/b/ss/msstonojstechnet/1/H.20.2--NS/0"
+        height="1" width="1" border="0" alt="" /&gt;&lt; /a&gt;
+    </noscript>
+    <noscript><img alt="" width="1" height="1" src="http://c.microsoft.com/trans_pixel.aspx" /></noscript>
+    @Scripts.Render("~/bundles/alljsbase")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

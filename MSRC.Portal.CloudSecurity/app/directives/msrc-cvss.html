@@ -1,0 +1,27 @@
+﻿<td>
+    <a href="https://www.microsoft.com/downloads/details.aspx?familyid={{affectedProduct.downloadCenterId}}" ng-show="affectedProduct.downloadCenterId">{{affectedProduct.name}}</a>
+    <span ng-hide="affectedProduct.downloadCenterId">{{affectedProduct.name}}</span>
+</td>
+<td>
+    {{affectedProduct.platform}}
+</td>
+<td>    
+    <div>{{affectedProduct.baseScore}}</div>
+</td>
+<td> 
+    <div>{{affectedProduct.temporalScore}}</div>
+</td>
+<td>
+    <div>{{affectedProduct.environmentScore}}</div>
+</td>
+<td class="vectorstr-col">
+    <div class="vectorstring" ng-attr-id="{{'AffectedProduct' + affectedProduct.id}}">
+        {{affectedProduct.vectorString}}
+    </div>
+    <span class="copytoclipboard">
+        <button class="btn btn-sm" ngclipboard data-clipboard-text="{{affectedProduct.vectorString}}">
+            <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+        </button>
+    </span>
+</td>
+

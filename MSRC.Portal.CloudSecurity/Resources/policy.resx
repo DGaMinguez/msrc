@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="contentAzureEmailHosting1" xml:space="preserve">
+    <value>Sending outboud e-mail to external domains (such as outlook.com, gmail.com, etc) directly from and e-mail server hosted in Azure compute services is not supported due to the elastic nature of public cloud service IPs and the potential for abuse.  As such, the Azure compute IP address blocks are added to public block lists (such as the Spamhaus PBL).</value>
+  </data>
+  <data name="contentAzureEmailHosting2" xml:space="preserve">
+    <value>This causes most e-mail providers to mark any mail sent via Azure-hosted servers as SPAM.  The only supported method for sending e-mail from Azure is to use another service outside Azure such as Exchange Online Protection, Sendgrid, or you own On-Prem e-mail server.</value>
+  </data>
+  <data name="contentChoosing1" xml:space="preserve">
+    <value>I already have an e-mail server and occasionally need my Azure application to send e-mail</value>
+  </data>
+  <data name="contentChoosing2" xml:space="preserve">
+    <value>I want to host my organization's e-mail server in Azure</value>
+  </data>
+  <data name="contentChoosing3" xml:space="preserve">
+    <value>I send bulk e-mail or newsletters</value>
+  </data>
+  <data name="contentChoosing4" xml:space="preserve">
+    <value>E-mail relays will not work for my purposes</value>
+  </data>
+  <data name="contentChoosingLink1" xml:space="preserve">
+    <value>Configuring your application to send authenticated e-mail</value>
+  </data>
+  <data name="contentChoosingLink2" xml:space="preserve">
+    <value>Configuring your Azure Exchange server to use an Exchange Online Protection Smart Connector</value>
+  </data>
+  <data name="contentChoosingLink3" xml:space="preserve">
+    <value>Configuring Sendgrid from your Azure application</value>
+  </data>
+  <data name="contentChoosingLink4" xml:space="preserve">
+    <value>Requesting an Azure E-mail Policy Exception</value>
+  </data>
+  <data name="contentChoosingSee" xml:space="preserve">
+    <value>See</value>
+  </data>
+  <data name="contentHeadingChoosing" xml:space="preserve">
+    <value>Choosing the Right Method for You</value>
+  </data>
+  <data name="contentHeadingStopSpam" xml:space="preserve">
+    <value>Microsoft's Commitment to Stop SPAM</value>
+  </data>
+  <data name="contentStopSpam" xml:space="preserve">
+    <value>Malicious users of Azure who send SPAM e-mail negatively impact all customers.  "IP Reputation" is a concept used by the operators of many security appliances which dynamically block connections that are deemed risky.  SPAM e-mail is a significant data point used when computing IP reputation.  When an IP range gets dirtied by some evildoer, it can cause neighboring legitimate customers to be blocked.</value>
+  </data>
+  <data name="contentStopSpamLink1" xml:space="preserve">
+    <value>Link 1</value>
+  </data>
+  <data name="contentStopSpamLink2" xml:space="preserve">
+    <value>Link 2</value>
+  </data>
+  <data name="contentTitle" xml:space="preserve">
+    <value>Azure Email Hosting</value>
+  </data>
+  <data name="securityTechCenterBreadCrum" xml:space="preserve">
+    <value>Security TechCenter</value>
+  </data>
+  <data name="securityUpdatesBreadCrum" xml:space="preserve">
+    <value>Security Updates</value>
+  </data>
+  <data name="securityUpdatesCloudSecurityBreadCrum" xml:space="preserve">
+    <value>Cloud Security</value>
+  </data>
+  <data name="securityUpdatesEmailHostingBreadCrum" xml:space="preserve">
+    <value>Azure Email Hosting</value>
+  </data>
+</root>

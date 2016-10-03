@@ -1,0 +1,29 @@
+﻿@using System.Configuration;
+@{
+
+    ViewBag.Title = "Home Page";
+}
+<script type="text/javascript">
+
+    var msrcCloudPortal = msrcCloudPortal || {};
+    msrcCloudPortal.firstLoad = true;
+    msrcCloudPortal.Adal = {};
+    msrcCloudPortal.Adal.clientID = "@(ConfigurationManager.AppSettings["ida:Audience"])";
+    msrcCloudPortal.Adal.tenant = "@(ConfigurationManager.AppSettings["ida:Tenant"])";
+    msrcCloudPortal.Adal.instance = "@(ConfigurationManager.AppSettings["ida:Instance"])";
+    msrcCloudPortal.showCVSSTab = "@(ConfigurationManager.AppSettings["showCVSSTab"])";
+    msrcCloudPortal.showAdvFilterSettings = "@(ConfigurationManager.AppSettings["showAdvFilterSettings"])";
+    msrcCloudPortal.showDeveloperTab = "@(ConfigurationManager.AppSettings["showDeveloperTab"])";
+    msrcCloudPortal.combinedTechnetUrl = "@Scripts.Url("~/bundles/technetjs")";
+    msrcCloudPortal.environmentHeader = "@ConfigurationManager.AppSettings["EnvironmentHeader"]";
+    msrcCloudPortal.staticFileVer = "@ConfigurationManager.AppSettings["StaticFileVer"]";
+
+</script>
+@Html.AntiForgeryToken()
+<div class="divLeft" ng-show="stateChanging && longRunningStateChange">
+    <div ng-if="stateChanging && longRunningStateChange" msrc-loading-spinner="true"></div>
+</div>
+<div ng-class="$state.current.cssClass">
+    <div ui-view ng-hide="stateChanging && longRunningStateChange">
+    </div>
+</div>

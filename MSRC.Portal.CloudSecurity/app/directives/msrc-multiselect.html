@@ -1,0 +1,24 @@
+﻿<div ng-mouseleave="closeDropdown()" ng-mouseenter="clearCloseDropdown()">
+    <div class='btn-group' ng-class='{open: open}'>
+        <input class='div_FLeft Dashboard_search3' style="width: 97%; color: grey; font-size: 100%" ng-click="openDropdown()"
+               value="{{model | msrcDropDownSelectedText}}" readonly="readonly" ng-disabled="model.isDisabled"/>               
+        <ul class='dropdown-menu' aria-labelledby='dropdownMenu'>
+            <li>
+                <a ng-click='selectAll()'>
+                    <span class='glyphicon glyphicon-ok green' aria-hidden='true'></span> Select All
+                </a>
+            </li>
+            <li>
+                <a ng-click='deselectAll();'>
+                    <span class='glyphicon glyphicon-remove red' aria-hidden='true'></span> Deselect All
+                </a>
+            </li>
+            <li class='divider'></li>
+            <li class='item' ng-repeat='option in model.options | orderBy:orderByClause()'>
+                <a ng-click='toggleSelection(option)'>
+                    <span ng-class='getClassName(option)' aria-hidden='true'></span> {{option.name}}
+                </a>
+            </li>
+        </ul>
+    </div>  
+</div>

@@ -45,3 +45,17 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/.vs
+/MSRC.Portal.CloudSecurity/bin
+/MSRC.Portal.CloudSecurity/obj/Debug
+/MSRC.Portal.CloudSecurity.Data.Common/bin/Debug
+/MSRC.Portal.CloudSecurity.Data.Common/obj/Debug
+/MSRC.Portal.CloudSecurity.DataAccess/bin/Debug
+/MSRC.Portal.CloudSecurity.DataAccess/obj/Debug
+/MSRC.Portal.CloudSecurity.Tests/bin/Debug
+/MSRC.Portal.CloudSecurity.Tests/obj/Debug
+/MSRC.Portal.JavascriptResxGenerator/bin
+/MSRC.Portal.JavascriptResxGenerator/obj
+/MSRC.Portal.TemplateGenerator/bin
+/MSRC.Portal.TemplateGenerator/obj
+/packages

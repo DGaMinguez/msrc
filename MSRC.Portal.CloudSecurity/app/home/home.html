@@ -1,0 +1,70 @@
+﻿<div class="BreadCrumb">
+    <div class="BreadCrumbInner EyebrowContainer">
+        <a href="https://technet.microsoft.com/{{activeLocale}}/security/default" class="EyebrowLink" title="{{vm.resources.securityTechCenterBreadCrum}}">
+            {{vm.resources.securityTechCenterBreadCrum}}
+        </a> &gt;
+        <a href="https://technet.microsoft.com/{{activeLocale}}/security/dn440717" class="EyebrowLink" title="{{vm.resources.securityUpdatesBreadCrum}}">
+            {{vm.resources.securityUpdatesBreadCrum}}
+        </a>
+        &gt; <span class="EyebrowElement" title="{{vm.resources.securityUpdatesCloudSecurityBreadCrum}}"> {{vm.resources.securityUpdatesCloudSecurityBreadCrum}}</span>
+    </div>
+</div>
+
+<h1>{{vm.resources.contentTitle}}</h1>
+<hr />
+
+<div>
+    <div class="col-sm-2">
+        <div style="text-align: center; max-width: 150px; min-height: 32px; vertical-align: middle;">Microsoft Cloud Security Advisories</div>
+        <div style="height: 100px; max-width: 150px; border: 1px solid black; background-color: dimgray;"></div>
+    </div>
+    <div class="col-sm-2">
+        <div style="text-align: center; max-width: 150px; min-height: 32px;">Microsoft Cloud Trust Center</div>
+        <div style="height: 100px; max-width: 150px; border: 1px solid black; background-color: dimgray;"></div>
+    </div>
+    <div class="col-sm-2">
+        <div style="text-align: center; max-width: 150px; min-height: 32px;">Report Abuse</div>
+        <div style="height: 100px; max-width: 150px; border: 1px solid black; background-color: dimgray;"></div>
+    </div>
+    <div class="col-sm-2">
+        <div style="text-align: center; max-width: 150px; min-height: 32px;">Azure Email Hosting</div>
+        <a ui-sref="app.policy({locale: activeLocale})" ui-sref-opts="{reload: false}">
+            <div style="height: 100px; max-width: 150px; border: 1px solid black; background-color: dimgray;">
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="col-sm-12" style="height: 20px;"></div>
+
+<div>
+    <div class="col-sm-2">
+        <div style="text-align: center; max-width: 150px; min-height: 32px;">Penetration Testing Request</div>
+        <div style="height: 100px; max-width: 150px; border: 1px solid black; background-color: dimgray;"></div>
+    </div>
+    <div class="col-sm-2">
+        <div style="text-align: center; max-width: 150px; min-height: 32px;">Notify us of a Vulnerability</div>
+        <div style="height: 100px; max-width: 150px; border: 1px solid black; background-color: dimgray;"></div>
+    </div>
+    <div class="col-sm-2">
+        <div style="text-align: center; max-width: 150px; min-height: 32px;">Azure Bug Bounty Program</div>
+        <div style="height: 100px; max-width: 150px; border: 1px solid black; background-color: dimgray;"></div>
+    </div>
+    <div class="col-sm-2">
+        <div style="text-align: center; max-width: 150px; min-height: 32px;">Azure Security Resources</div>
+        <div style="height: 100px; max-width: 150px; border: 1px solid black; background-color: dimgray;"></div>
+    </div>
+</div>
+
+<div class="contentTextContainer">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper tellus est, non varius risus egestas eget. Cras sit amet orci aliquet tortor dapibus placerat at et felis. Suspendisse sit amet nisl libero. Nullam fringilla malesuada enim. Mauris pharetra dui eget convallis eleifend. Nulla quam diam, molestie ut lorem nec, maximus cursus dui. Aenean ultricies venenatis bibendum.
+    <br />
+    <br />
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin posuere risus ac mattis laoreet. Integer ut congue est, in venenatis magna. Integer ut sagittis urna. Curabitur in odio ante. Integer finibus nulla massa, nec elementum arcu lacinia eu. Nullam eget erat purus. Ut quis ligula et augue tincidunt interdum at sed sapien. Nulla porta a neque nec dictum. Phasellus sit amet tortor eu mi cursus lacinia sed at nulla. Praesent gravida, nunc ut venenatis faucibus, ex purus luctus orci, ac congue arcu nulla eget ligula. Aenean elementum luctus ullamcorper. In sodales tellus vel mi fermentum, vel tincidunt lorem elementum. Duis eget lorem felis. Aliquam facilisis ex varius euismod maximus. Morbi vitae ullamcorper nisi.
+    <br />
+    <br />
+    Donec tempor tempor mauris, id auctor magna pretium eu. Sed nunc libero, fermentum sed tempor vitae, scelerisque eget urna. Vestibulum mi diam, aliquet a fermentum quis, feugiat eu risus. In diam nibh, ullamcorper sit amet lobortis vel, tincidunt bibendum mi. Donec pharetra ex ac mattis vulputate. Suspendisse accumsan felis risus, dignissim lacinia eros pharetra sed. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas nec ipsum dictum metus cursus auctor. Aliquam a aliquam risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+</div>
+<div class="alert alert-danger" role="alert" ng-show="vm.error" style="margin-top: 10px;">
+    <strong>{{vm.error}}</strong>
+</div>

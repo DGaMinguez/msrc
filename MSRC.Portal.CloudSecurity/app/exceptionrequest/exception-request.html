@@ -1,0 +1,198 @@
+﻿<div class="BreadCrumb">
+    <div class="BreadCrumbInner EyebrowContainer">
+        <a href="https://technet.microsoft.com/{{activeLocale}}/security/default" class="EyebrowLink" title="{{vm.resources.securityTechCenterBreadCrum}}">
+            {{vm.resources.securityTechCenterBreadCrum}}
+        </a> &gt;
+        <a href="https://technet.microsoft.com/{{activeLocale}}/security/dn440717" class="EyebrowLink" title="{{vm.resources.securityUpdatesBreadCrum}}">
+            {{vm.resources.securityUpdatesBreadCrum}}
+        </a> &gt;
+        <a ui-sref="app.home({locale: activeLocale})" ui-sref-opts="{reload: false}" class="EyebrowLink" title="{{vm.resources.securityUpdatesCloudSecurityBreadCrum}}">
+            {{vm.resources.securityUpdatesCloudSecurityBreadCrum}}
+        </a>&gt;
+        <a ui-sref="app.policy({locale: activeLocale})" ui-sref-opts="{reload: false}" class="EyebrowLink" title="{{vm.resources.securityUpdatesEmailHostingBreadCrum}}">
+            {{vm.resources.securityUpdatesEmailHostingBreadCrum}}
+        </a>
+        &gt; <span class="EyebrowElement" title="{{vm.resources.securityUpdatesExceptionRequestBreadCrum}}"> {{vm.resources.securityUpdatesExceptionRequestBreadCrum}}</span>
+    </div>
+</div>
+
+<h1>{{vm.resources.contentTitle}}</h1>
+<hr />
+
+<div class="azureEmailHosting azureEmailHosting1">
+</div>
+
+{{vm.resources.contentExceptionRequest1}}
+<br />
+<br />
+{{vm.resources.contentExceptionRequest2}}
+<br />
+<br />
+{{vm.resources.contentExceptionRequest3}}
+
+<h3>{{vm.resources.contentHeadingRequirements}}</h3>
+<div class="requirementSubheading">
+    {{vm.resources.contentRequirementHeading1}}
+</div>
+<ul>
+    <li>{{vm.resources.contentRequirementAccountType1}}</li>
+    <li>{{vm.resources.contentRequirementAccountType2}}</li>
+    <li>{{vm.resources.contentRequirementAccountType3}}</li>
+</ul>
+<div class="requirementSubheading">
+    {{vm.resources.contentRequirementHeading2}}
+</div>
+<div>
+    {{vm.resources.contentAssetType}}
+</div>
+<div class="requirementSubheading requirementSubheadingMargin">
+    {{vm.resources.contentRequirementHeading3}}
+</div>
+<div>
+    {{vm.resources.contentIPType}}
+</div>
+<div class="requirementSubheading requirementSubheadingMargin">
+    {{vm.resources.contentRequirementHeading4}}
+</div>
+<div>
+    {{vm.resources.contentRevocation}}
+</div>
+<ul>
+    <li>{{vm.resources.contentRevocation1}}</li>
+    <li>{{vm.resources.contentRevocation2}}</li>
+</ul>
+
+<table class="previous table table-bordered table-striped m-y-1 m-b-2">
+    <caption>
+        <h3>{{vm.resources.contentHeadingPreviousRequest}}</h3>
+    </caption>
+    <thead>
+        <tr>
+            <th class="date-col">
+                <div ng-click="vm.sortBy('submittedDate')">
+                    {{vm.resources.columnSubmitted}}
+                    <span ng-show="vm.sortOptions.sortBy==='submittedDate'"
+                          ng-class="vm.sortOptions.sortReverse ? 'glyphicon glyphicon-triangle-bottom' : 'glyphicon glyphicon-triangle-top'"></span>
+                </div>
+            </th>
+            <th class="subs-col">
+                <div ng-click="vm.sortBy('subscriptionId')">
+                    {{vm.resources.columnSubscriptionGuid}}
+                    <span ng-show="vm.sortOptions.sortBy==='subscriptionId'"
+                          ng-class="vm.sortOptions.sortReverse ? 'glyphicon glyphicon-triangle-bottom' : 'glyphicon glyphicon-triangle-top'"></span>
+                </div>
+            </th>
+            <th class="status-col">
+                <div ng-click="vm.sortBy('status')">
+                    {{vm.resources.columnStatus}}
+                    <span ng-show="vm.sortOptions.sortBy==='status'"
+                          ng-class="vm.sortOptions.sortReverse ? 'glyphicon glyphicon-triangle-bottom' : 'glyphicon glyphicon-triangle-top'"></span>
+                </div>
+            </th>
+            <th class="contact-col">
+                <div ng-click="vm.sortBy('contact')">
+                    {{vm.resources.columnContact}}
+                    <span ng-show="vm.sortOptions.sortBy==='contact'"
+                          ng-class="vm.sortOptions.sortReverse ? 'glyphicon glyphicon-triangle-bottom' : 'glyphicon glyphicon-triangle-top'"></span>
+                </div>
+            </th>
+            <th class="tracking-col">
+                <div ng-click="vm.sortBy('trackingNumber')">
+                    {{vm.resources.columnTrackingNumber}}
+                    <span ng-show="vm.sortOptions.sortBy==='trackingNumber'"
+                          ng-class="vm.sortOptions.sortReverse ? 'glyphicon glyphicon-triangle-bottom' : 'glyphicon glyphicon-triangle-top'"></span>
+                </div>
+            </th>
+            <th class="comments-col">
+                <div ng-click="vm.sortBy('comments')">
+                    {{vm.resources.columnComments}}
+                    <span ng-show="vm.sortOptions.sortBy==='comments'"
+                          ng-class="vm.sortOptions.sortReverse ? 'glyphicon glyphicon-triangle-bottom' : 'glyphicon glyphicon-triangle-top'"></span>
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody id="table_tbody">
+        <tr ng-repeat="exceptionRequest in vm.previouslySubmittedRequests" ng-show="vm.hasRequests">
+            <td class="date-col">{{exceptionRequest.submittedDate | date:'dd-MMM-yyyy' }}</td>
+            <td class="subs-col">{{exceptionRequest.subscriptionId}}</td>
+            <td class="status-col">{{exceptionRequest.status.name}}</td>
+            <td class="contact-col">{{exceptionRequest.contactEmail}}</td>
+            <td class="tracking-col">{{exceptionRequest.trackingId}}</td>
+            <td class="comments-col">{{exceptionRequest.comments}}</td>
+        </tr>
+        <tr ng-hide="vm.hasRequests">
+            <td colspan="6">
+                <div class="alert alert-info" role="alert">
+                    {{vm.resources.contentNoRequests}}
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>{{vm.resources.contentHeadingRequest}}</h3>
+<form name="exceptionRequestForm">
+    <div>
+        <label style="width: 150px; text-align: right; padding-right: 10px;">{{vm.resources.labelSubscriptionGuid}}</label>
+        <input id="txt_subscriptionguid" 
+               type="text" 
+               ng-model="vm.newRequest.subscriptionId" 
+               placeholder="{{vm.resources.placeholderText}}" 
+               style="width: 300px;" />
+    </div>
+    <div style="margin-top: 10px;">
+        <label style="width: 150px; text-align: right; padding-right: 10px;">{{vm.resources.labelContactEmail}}</label>
+        <input id="txt_contactemail" 
+               type="text" 
+               ng-model="vm.newRequest.contactEmail" 
+               placeholder="{{vm.resources.placeholderText}}" style="width: 300px;" />
+    </div>
+    <div style="margin-top: 10px;">
+        <label style="width: 150px; text-align: right; padding-right: 10px;">{{vm.resources.labelExpectedVolume}}<br />{{vm.resources.labelMessagesPerDay}}</label>
+        <input type="radio" 
+               id="radExpectedVolume1" 
+               value="1" 
+               ng-model="vm.newRequest.expectedVolumeId" />
+        <label style="padding-right: 20px;" for="radExpectedVolume1">{{vm.resources.labelVolume1}}</label>
+        <input type="radio" 
+               id="radExpectedVolume2" 
+               value="2" 
+               ng-model="vm.newRequest.expectedVolumeId" />
+        <label style="padding-right: 20px;" for="radExpectedVolume2">{{vm.resources.labelVolume2}}</label>
+        <input type="radio" 
+               id="radExpectedVolume3" 
+               value="3" 
+               ng-model="vm.newRequest.expectedVolumeId" />
+        <label style="padding-right: 20px;" for="radExpectedVolume3">{{vm.resources.labelVolume3}}</label>
+        <input type="radio" 
+               id="radExpectedVolume4" 
+               value="4" 
+               ng-model="vm.newRequest.expectedVolumeId" />
+        <label style="padding-right: 20px;" for="radExpectedVolume4">{{vm.resources.labelVolume4}}</label>
+    </div>
+    <div style="margin-top: 10px;">
+        <label style="width: 150px; text-align: right; padding-right: 10px;">{{vm.resources.labelIPAddresses}}<br />{{vm.resources.labelCommaSeparated}}</label>
+        <textarea id="txt_ipaddresses" 
+                  style="width: 300px; height: 150px; vertical-align: top;" 
+                  ng-model="vm.newRequest.ipAddresses" 
+                  placeholder="{{vm.resources.placeholderText}}"></textarea>
+    </div>
+    <div style="margin-top: 10px;">
+        <label style="width: 150px; text-align: right; padding-right: 10px;">{{vm.resources.labelJustification}}</label>
+        <textarea id="txt_justification" 
+                  style="width: 300px; height: 150px; vertical-align: top;" 
+                  ng-model="vm.newRequest.justification" 
+                  placeholder="{{vm.resources.placeholderText}}"></textarea>
+    </div>
+    <div style="margin-top: 10px;">
+        <input type="button" 
+               ng-click="vm.createNewRequest()" 
+               style="margin-left: 480px;" value="{{vm.resources.labelSubmit}}" ng-disabled="exceptionRequestForm.$invalid" />
+    </div>
+</form>
+
+<div ng-show="vm.newRequest.success" style="margin-top: 10px;">
+    {{vm.resources.contentTrackingNumber}} {{vm.newRequest.trackingId}}. <br/>
+    {{vm.resources.contentFollowUp}}
+</div>
